@@ -1,0 +1,140 @@
+.row.bio
+    :markdown
+        I am a Web Developer in Chicago working for [GoHealth]. I get to help develop products that let people find and enroll in the right health insurance plan. I get to work with cool technologies like [AngularJS], [nodejs], [Middleman] (which this is built on) and any thing that seems useful. If that sounds intersting to you, we are [hiring].
+
+        Previously I was working in B2B middleware creating enterprise service busses to let machines talk to each other.
+
+        Machines are cool, but I like building things for people more.
+
+        [gohealth]:https://www.gohealthinsurance.com
+        [angularjs]:https://github.com/angular/angular.js
+        [nodejs]:http://nodejs.org/
+        [middleman]:http://middlemanapp.com/
+        [hiring]:http://www.gohealthinsurance.com/careers/
+
+.row
+    %h2.header Personal Projects
+    .project.row
+        #carousel-example-generic.carousel.slide.col-md-7{"data-ride" => "carousel", "data-interval" => "3000"}
+            / Indicators
+            %ol.carousel-indicators
+                %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+                %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+                %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+            / Wrapper for slides
+            .carousel-inner
+                .item.active
+                    =image_tag 'tfl1.png', :alt => 'Tempo Free Lax Homepage'
+                .item
+                    =image_tag 'tfl2.png', :alt => 'Tempo Free Lax Team Page'
+                .item
+                    =image_tag 'tfl3.png', :alt => 'Tempo Free Lax Game Page'
+            / Controls
+            %a.left.carousel-control{"data-slide" => "prev", href: "#carousel-example-generic", role: "button"}
+                %span.glyphicon.glyphicon-chevron-left
+            %a.right.carousel-control{"data-slide" => "next", href: "#carousel-example-generic", role: "button"}
+                %span.glyphicon.glyphicon-chevron-right
+        .content.col-md-5
+            %h3
+                =link_to 'Tempo Free Lacrosse', 'http://tempofreelax.com'
+            :markdown
+                My friend [Tim] got a gig as the public address announcer for the Michigan club lacrosse team. One thing lead to another, and it lead to him starting up [GreatLaxState]. I may have done some slight assistance on the layout.
+
+                We found that lacrosse was sort of lacking in the sports analytics department. At least in terms of something you could find online. We worked with some people to develop the algorithms then started working on the site.
+
+                Version 1.0 was built in [CakePHP] and required us to find all the box scores and manually input stats, which we did for all of the 2012 season.
+
+                Version 2.0 is mainly the current version, which is built on Rails and hosted on [Heroku]. The biggest improvement came from creating a nightly job that automatically parsed boxscores and updated the statistics. This freed up time from data entry to actually work on features.
+
+                The next steps involve:
+
+                *   Data Visualizations
+
+                *   Useful player metrics and rankings
+
+                *   Conference statistics and breakdowns
+
+                *   Improved prediction algorithm
+
+                [kenpom]:http://kenpom.com
+                [greatlaxstate]:http://greatlaxstate
+                [tim]:https://twitter.com/greatlaxstate
+                [cakephp]:http://cakephp.org/
+                [heroku]:https://heroku.com
+    .project.row
+        #carousel-example-generic.carousel.slide.col-md-7{"data-ride" => "carousel", "data-interval" => "3000"}
+            / Indicators
+            %ol.carousel-indicators
+                %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+                %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+                %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+            / Wrapper for slides
+            .carousel-inner
+                .item.active
+                    =image_tag 'bsff1.png', :alt => 'Broke Student Film Fest Homepage'
+                .item
+                    =image_tag 'bsff2.png', :alt => 'Broke Student Film Fest Films'
+                .item
+                    =image_tag 'bsff3.png', :alt => 'Broke Student Film Fest Sponsor Form'
+            / Controls
+            %a.left.carousel-control{"data-slide" => "prev", href: "#carousel-example-generic", role: "button"}
+                %span.glyphicon.glyphicon-chevron-left
+            %a.right.carousel-control{"data-slide" => "next", href: "#carousel-example-generic", role: "button"}
+                %span.glyphicon.glyphicon-chevron-right
+        .content.col-md-5
+            %h3
+                =link_to 'Broke Student Film Festival', 'http://brokestudentfilmfestival.com'
+            :markdown
+                This was a project for my brother and his fiancé (note: update this 5/2015). They were having issues with the website for the film festival they were organizing. I offered to step in and help.
+
+                They didn't have any hosting and didn't particularly want to spend a lot of time hacking code, so it needed to be something easy so that I wouldn't need to do that much work.
+
+                I decided to use [Middleman] as the CMS, which allowed me to use markdown to write most of the content. I was then add them as contributors to repo on [Github] and have them use [Prose.io] to edit the content. Whenever a change is pushed, it kicks of a [TravisCI] build that will build the distribution and upload it to [S3] where the project is hosted.
+
+                [travisci]:https://travis-ci.org/
+                [github]:https://github.com
+                [prose.io]:https://prose.io
+                [middleman]:http://middlemanapp.com
+                [s3]:http://aws.amazon.com/s3/
+.row
+    %h2.header Hobbies
+    .hobby.row
+        %h3 Fitness
+        :markdown
+            Since starting at GoHealth, I've gotten myself into the habit of going to the gym every morning before work. I love the feeling of leaving the gym at 8am to head to work knowing I've already gotten my workout in for the day.
+
+            When the weather is nice, I'll try to head out and run. I've done one 5k, but I enjoy the time out running more that competing against others or a clock.
+
+            For my competitive side, I've recently started doing drop in baskeball once a week. I haven't played regularly since college. The first time I played in Chicago, I couldn't walk for a few days after. Luckily, it's gotten somewhat better.
+    .hobby.row
+        %h3 Beer
+        :markdown
+            A year out of college, two friends of mine and I began brewing beer and writing about at at [Yeastbound and Down]. We neither brew nor blog about beer much now, but in our day we made some crazy beers including:
+
+            * Peanut butter porter
+            * Agave nectar pale ale
+            * S'more stout
+            * Chili pepper porter (with Chipotles and Habeñeros)
+
+            I still enjoy seeking out new and exciting beers that show some new dimension to what beer can be.
+
+            [yeastbound and down]:http://yeastbounddown.com
+.row
+    %h2.header Resume
+    =partial 'partials/resume'
+
+- content_for :jumbotron do
+    .row.mug-container
+        .col-sm-7
+            .row
+                %h1 Paul Nelson
+                %h2.subhead Web Developer
+            .row.social-list
+                %a.col-xs-4{:href => 'https://github.com/panel'}
+                    %i.social.fa.fa-github
+                %a.col-xs-4{:href => 'https://www.linkedin.com/pub/paul-nelson/6/a23/7b0'}
+                    %i.social.fa.fa-linkedin-square
+                %a.col-xs-4{:href => 'https://twitter.com/paulvblue'}
+                    %i.social.fa.fa-twitter
+        .col-sm-5
+            = image_tag 'mug2.jpg', :class => 'mugshot'

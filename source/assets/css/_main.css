@@ -42,6 +42,20 @@
     background:#eee;
 }
 
+.navbar-fixed-top + .jumbotron, .navbar-fixed-top + .container {
+    margin-top: 60px;
+}
+
+.navbar img {
+    border-radius: 50%;
+    max-height: 100%;
+    margin: -.3em .5em 0 0;
+}
+
+body {
+    position: relative;
+}
+
 h1 + h2 {
     margin-top: 0px;
 }

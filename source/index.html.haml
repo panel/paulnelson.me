@@ -1,4 +1,4 @@
-.row.bio
+.row#bio.bio
     :markdown
         I am a Web Developer in Chicago working for [GoHealth]. I get to help develop products that let people find and enroll in the right health insurance plan. I get to work with cool technologies like [AngularJS], [nodejs], [Middleman] (which this is built on) and any thing that seems useful. If that sounds intersting to you, we are [hiring].
 
@@ -13,7 +13,7 @@
         [hiring]:http://www.gohealthinsurance.com/careers/
 
 .row
-    %h2.header Personal Projects
+    %h2#projects.header Personal Projects
     .project.row
         #carousel-example-generic.carousel.slide.col-md-7{"data-ride" => "carousel", "data-interval" => "3000"}
             / Indicators
@@ -97,7 +97,7 @@
                 [middleman]:http://middlemanapp.com
                 [s3]:http://aws.amazon.com/s3/
 .row
-    %h2.header Hobbies
+    %h2#hobbies.header Hobbies
     .hobby.row
         %h3 Fitness
         :markdown
@@ -120,11 +120,12 @@
 
             [yeastbound and down]:http://yeastbounddown.com
 .row
-    %h2.header Resume
+    %h2#resume.header
+        Resume
     =partial 'partials/resume'
 
 - content_for :jumbotron do
-    .row.mug-container
+    .row#top.mug-container
         .col-sm-7
             .row
                 %h1 Paul Nelson
@@ -138,3 +139,15 @@
                     %i.social.fa.fa-twitter
         .col-sm-5
             = image_tag 'mug2.jpg', :class => 'mugshot'
+
+- content_for :navbar do
+    .collapse.navbar-collapse
+        %ul.nav.navbar-nav
+            %li
+                %a.active{href: "#top"} About
+            %li
+                %a{href: "#projects"} Projects
+            %li
+                %a{href: "#hobbies"} Hobbies
+            %li
+                %a{href: "#resume"} Resume

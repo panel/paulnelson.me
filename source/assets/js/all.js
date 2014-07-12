@@ -1,2 +1,2 @@
-//require= vendor/bootstrap.min.js
-//require= _main
+//= require_directory ./vendor
+//= require_directory .
